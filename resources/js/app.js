@@ -1,10 +1,17 @@
 import './bootstrap';
 import '../css/app.css';
+
+import { createPinia } from 'pinia'
+
 import { createApp, h } from 'vue'
 import { createInertiaApp, Head, Link } from '@inertiajs/vue3'
 import {ZiggyVue} from "../../vendor/tightenco/ziggy";
-
+import 'flowbite';
 import Main from "./Layouts/Main.vue";
+
+const pinia = createPinia()
+
+
 createInertiaApp({
     title: (title) => `My App ${title}`,
     resolve: name => {
@@ -17,6 +24,7 @@ createInertiaApp({
     createApp({ render: () => h(App, props) })
       .use(plugin)
       .use(ZiggyVue)
+      .use(pinia)
       .component("Head",Head)
       .component("Link",Link)
       .mount(el)
@@ -26,3 +34,4 @@ createInertiaApp({
     showSpinner:true
   }
 })
+

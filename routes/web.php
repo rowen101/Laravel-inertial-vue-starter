@@ -11,4 +11,8 @@ use Illuminate\Support\Facades\Route;
 //     return Inertia::render('Home');
 // });
 
-Route::inertia('/','Home')->name('home');
+ //Route::inertia('/','Home')->name('home');
+
+Route::get('/dashboard',function(){return Inertia::render('Home');})->name('dashboard');
+Route::get('/sli/user',[\App\Http\Controllers\UserController::class,'index'])->name('sli/user');
+
