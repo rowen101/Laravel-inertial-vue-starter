@@ -27,14 +27,11 @@ const tableRows = [
 
 // Define table headers for CoreTable
 const userHeader = [
-  { text: "ID", value: "id" },
-  { text: "Item Code", value: "itemcode" },
-  { text: "Description", value: "description" },
-  { text: "ABC Code", value: "abccode" },
+  { text: "ID", fieldName:  'id',type:'link' },
+  { text: "Item Code", fieldName: 'itemcode' },
+  { text: "Description", fieldName: 'description' },
+  { text: "ABC Code", fieldName: 'abccode' },
 ];
-// Debugging: Log tableRows and headers
-console.log("Table Rows:", tableRows);
-console.log("Table Headers:", userHeader);
 
 
 // Placeholder functions for button actions
@@ -60,7 +57,7 @@ const openLink = (link) => {
       />
     </SectionTitleLineWithButton>
 
-    <CardBox class="flex-1 p-3" has-table>
+    <CardBox class="flex-1 p-6" has-table>
       <CoreTable
         v-if="tableRows.length > 0"
         :table-rows="tableRows"
