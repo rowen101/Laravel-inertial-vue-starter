@@ -1,14 +1,4 @@
 <script setup>
-import {
-  mdiAccountGroup,
-  mdiFileDocumentPlus,
-} from "@mdi/js";
-
-import SectionTitleLineWithButton from "@/Components/SectionTitleLineWithButton.vue";
-import CoreTable from "@/Components/CoreTable.vue";
-import CardBox from "@/Components/CardBox.vue";
-import BaseButton from "@/Components/BaseButton.vue";
-import CardBoxComponentEmpty from "@/Components/CardBoxComponentEmpty.vue";
 
 const tableRows = [
   {

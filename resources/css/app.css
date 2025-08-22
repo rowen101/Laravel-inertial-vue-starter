@@ -1,3 +1,5 @@
+@import 'ionicons/dist/css/ionicons.min.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

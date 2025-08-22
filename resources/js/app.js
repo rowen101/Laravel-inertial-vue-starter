@@ -2,12 +2,14 @@ import './bootstrap';
 import '../css/app.css';
 
 import { createPinia } from 'pinia'
+import { createVuestic } from 'vuestic-ui'
+import 'vuestic-ui/css'
 
 import { createApp, h } from 'vue'
 import { createInertiaApp, Head, Link } from '@inertiajs/vue3'
 import {ZiggyVue} from "../../vendor/tightenco/ziggy";
-import 'flowbite';
-import Main from "./Layouts/Main.vue";
+import Main from "./Layouts/AppLayout.vue";
+import config from './services/vuestic-ui/global-config'
 
 const pinia = createPinia()
 
@@ -25,6 +27,7 @@ createInertiaApp({
       .use(plugin)
       .use(ZiggyVue)
       .use(pinia)
+      .use(createVuestic({ config }))
       .component("Head",Head)
       .component("Link",Link)
       .mount(el)
